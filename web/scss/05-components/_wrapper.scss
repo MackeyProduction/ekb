@@ -1,0 +1,59 @@
+@import "../01-variables/_base";
+
+html, body {
+  height: $height;
+}
+
+.wrapper {
+  overflow: hidden;
+  height: $height;
+  width: $width;
+  min-height: $min-height;
+  background-size: cover;
+  background-image: url("../img/logo.jpg");
+  background-position: 100% 70%;
+  box-shadow: 0px 2px 2px $boxShadow;
+
+  @media (max-width: 768px) {
+    height: auto;
+  }
+
+  &.after {
+    position: absolute;
+    opacity: 0.8;
+    background: $darkGrey;
+  }
+
+  &-inner {
+    margin-top: 15%;
+    padding: 60px;
+  }
+
+  &-content {
+    color: $white;
+    text-shadow: 0 1px 3px $textShadow;
+
+    h1 {
+      font-size: $wrapperHeadline;
+      margin-right: 10px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: $wrapperContent;
+    }
+  }
+
+  &-form {
+    font-size: $formContent;
+
+    &.footer {
+      margin-top: 10px;
+      color: $grey;
+    }
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+}

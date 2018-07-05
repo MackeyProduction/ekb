@@ -1,0 +1,49 @@
+@import "../01-variables/_base";
+
+.footer {
+  width: $width;
+  height: auto;
+  background-color: $whiteSmoke;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  &-subpage {
+    position: absolute;
+    bottom: 0;
+
+    @media (max-width: 768px) {
+      position: relative;
+    }
+  }
+
+  &-content {
+    width: 80%;
+  }
+
+  .text {
+    &-right {
+      float: right;
+    }
+
+    &-left {
+      float: left;
+    }
+  }
+
+  ul {
+    list-style: none;
+
+    @media (max-width: 768px) {
+      float: left;
+    }
+  }
+
+  li {
+    padding-left: 30px;
+    float: left;
+
+    @media (max-width: 768px) {
+      clear: both;
+    }
+  }
+}
