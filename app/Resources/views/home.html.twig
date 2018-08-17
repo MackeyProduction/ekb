@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Elektronisches Klassenbuch{% endblock %}</title>
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('bundles/app/bootstrap/css/bootstrap.css') }}">
+            <link rel="stylesheet" type="text/css" href="{{ asset('css/main.css') }}" />
+        {% endblock %}
+
+        <script src="{{ asset('bundles/app/bootstrap/js/jquery-3.2.1.js') }}"></script>
+        <script src="{{ asset('bundles/app/bootstrap/js/bootstrap.js') }}"></script>
+
+        <nav class="ekbNavbar">
+            <div class="ekbNavbar-container">
+                <button type="button" class="btn-default navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <div class="ekbNavbar-navbar collapse" id="navbar-collapse">
+                <div class="ekbNavbar-navbar-right">
+                    <ul class="ekbNavbar-navbar__nav">
+                        <li class="ekbNavbar-navbar__nav--active"><a href="#">Home</a></li>
+                        <li><a href="#team">Team</a></li>
+                        <li><a href="#funktionen">Funktionen</a></li>
+                        <li><a href="#design">Design</a></li>
+                    </ul>
+                </div>
+                <div class="ekbNavbar-navbar-left">
+                    <img src="{{ asset('img/GSO-logo_cropped_transparent.png') }}" alt="GSO Logo" width="180px" height="80px">
+                </div>
+            </div>
+        </nav>
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

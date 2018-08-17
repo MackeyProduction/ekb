@@ -1,0 +1,79 @@
+.ekbNavbar {
+    top: 0;
+    position: absolute;
+    width: 100%;
+    padding-top: 60px;
+    line-height: 5;
+
+    &-navbar {
+        z-index: 9999;
+        color: #ffffff;
+        position: relative;
+        @extend .container;
+
+        &.collapse {
+            @media (max-width: 768px) {
+                display: none;
+            }
+
+            @media (min-width: 768px) {
+                display: block;
+            }
+        }
+
+        &-left {
+            padding-left: 60px;
+            float: left;
+        }
+
+        &-right {
+            padding-right: 60px;
+            float: right;
+        }
+
+        &__nav {
+            list-style: none;
+            text-transform: lowercase;
+
+            a {
+                color: #ffffff;
+            }
+
+            a:hover {
+                color: #ffffff;
+                text-decoration: none;
+                padding-bottom: 5px;
+                border-bottom: 2px solid #ffffff;
+            }
+
+            a:visited {
+                color: #ffffff;
+                text-decoration: none;
+            }
+
+            li {
+                display: inline;
+                font-size: 16px;
+                letter-spacing: 2px;
+                margin-left: 30px;
+            }
+
+            &--active {
+                padding-bottom: 5px;
+                border-bottom: 2px solid #ffffff;
+            }
+        }
+    }
+
+    &-container {
+        @extend .container-fluid;
+
+        .navbar-toggle {
+            &.collapsed {
+                @media (max-width: 768px) {
+                    display: block;
+                }
+            }
+        }
+    }
+}

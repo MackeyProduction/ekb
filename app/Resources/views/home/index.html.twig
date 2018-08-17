@@ -1,11 +1,52 @@
-{% extends 'base.html.twig' %}
+{% extends 'home.html.twig' %}
 
 {% block body %}
-    <div style="width: 100%;margin: 0;padding: 0;">
-        <div style="position: absolute;background: rgba(0,0,0,0.6);width: 100%;height: 100%;z-index: 1;"></div>
-        <div style="position: absolute;overflow: hidden;height: 100%;width: 100%;background-size: cover;background-image: url('../img/background.jpg');background-position: 100% 70%;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);">
+    <section class="welcomeTeaser">
+        <div class="welcomeTeaser after"></div>
 
+        <div class="welcomeTeaser-container">
+            <div class="welcomeTeaser-inner">
+                <div class="welcomeTeaser__description">
+                    <div class="welcomeTeaser__description-headline">
+                        <h1>Elektronisches Klassenbuch</h1>
+                    </div>
+                    <div class="welcomeTeaser__description-text">
+                        <p>
+                            Verwalte deine Fehlstunden und Einträge in deinem persönlichen Klassenbuch.
+                        </p>
+                    </div>
+                </div>
+                <div class="welcomeTeaser__form">
+                    <div class="welcomeTeaser__form-jumbotron">
+                        <div class="welcomeTeaser__form-content">
+                            <form method="post">
+                                <div class="form-group">
+                                    <label for="username">Benutzername</label>
+                                    <input type="text" class="form-control" id="username" name="username"
+                                           placeholder="Dein Benutzername">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" class="form-control" id="email" name="email"
+                                           placeholder="Deine Email-Adresse">
+                                </div>
+                                <div class="form-group">
+                                    <label for="passwort">Passwort</label>
+                                    <input type="password" class="form-control" id="passwort" name="passwort"
+                                           placeholder="Dein Passwort">
+                                </div>
+                                <input type="submit" class="btn btn-lg btn-success btn-block" value="Registrieren"
+                                       name="registrieren" id="registrieren">
+                            </form>
+                        </div>
+                        <div class="welcomeTeaser__form-footer">
+                            Durch das Klicken von <q>Registrieren</q>, bestätigst Du unsere <a href="#">Allgemeinen
+                                Geschäftsbedingungen</a>, sowie unsere <a
+                                    href="#">Datenschutzbestimmungen</a>.
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 {% endblock %}
