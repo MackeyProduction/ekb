@@ -115,47 +115,65 @@ html, body {
   opacity: 0.6;
   background: #333;
 }
-/* line 32, ../scss/05-components/_wrapper.scss */
+@media (max-width: 768px) {
+  /* line 28, ../scss/05-components/_wrapper.scss */
+  .welcomeTeaser-container {
+    padding: 0 !important;
+  }
+}
+/* line 36, ../scss/05-components/_wrapper.scss */
 .welcomeTeaser-inner {
   margin-top: 15%;
   padding-right: 60px;
   padding-left: 60px;
   padding-top: 120px;
 }
-/* line 40, ../scss/05-components/_wrapper.scss */
+/* line 44, ../scss/05-components/_wrapper.scss */
 .welcomeTeaser__description {
   color: #FFFFFF;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
-/* line 45, ../scss/05-components/_wrapper.scss */
+/* line 49, ../scss/05-components/_wrapper.scss */
 .welcomeTeaser__description-headline > h1 {
-  font-size: 64px;
   margin-right: 10px;
   margin-bottom: 20px;
 }
-/* line 51, ../scss/05-components/_wrapper.scss */
+@media (min-width: 560px) {
+  /* line 49, ../scss/05-components/_wrapper.scss */
+  .welcomeTeaser__description-headline > h1 {
+    font-size: 64px;
+  }
+}
+/* line 58, ../scss/05-components/_wrapper.scss */
 .welcomeTeaser__description-text > p {
   font-size: 24px;
 }
-/* line 56, ../scss/05-components/_wrapper.scss */
+/* line 63, ../scss/05-components/_wrapper.scss */
 .welcomeTeaser__form {
   font-size: 14px;
 }
-/* line 60, ../scss/05-components/_wrapper.scss */
+/* line 67, ../scss/05-components/_wrapper.scss */
 .welcomeTeaser__form-jumbotron {
   margin-left: 60px;
 }
-/* line 65, ../scss/05-components/_wrapper.scss */
+/* line 72, ../scss/05-components/_wrapper.scss */
 .welcomeTeaser__form-content {
   font-size: 16px;
 }
-/* line 69, ../scss/05-components/_wrapper.scss */
+/* line 75, ../scss/05-components/_wrapper.scss */
+.welcomeTeaser__form-content--submit-span {
+  text-align: center;
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+/* line 83, ../scss/05-components/_wrapper.scss */
 .welcomeTeaser__form-footer {
   margin-top: 10px;
   color: #777;
 }
 @media (max-width: 768px) {
-  /* line 56, ../scss/05-components/_wrapper.scss */
+  /* line 63, ../scss/05-components/_wrapper.scss */
   .welcomeTeaser__form {
     display: none;
   }
@@ -167,7 +185,7 @@ html, body {
   position: absolute;
   width: 100%;
   padding-top: 60px;
-  line-height: 5;
+  line-height: 6;
 }
 /* line 8, ../scss/05-components/_navbar.scss */
 .ekbNavbar-navbar {
@@ -197,44 +215,90 @@ html, body {
   padding-right: 60px;
   float: right;
 }
-/* line 34, ../scss/05-components/_navbar.scss */
-.ekbNavbar-navbar__nav {
+/* line 35, ../scss/05-components/_navbar.scss */
+.ekbNavbar-navbar__nav-content {
   list-style: none;
   text-transform: lowercase;
 }
-/* line 38, ../scss/05-components/_navbar.scss */
-.ekbNavbar-navbar__nav a {
+/* line 39, ../scss/05-components/_navbar.scss */
+.ekbNavbar-navbar__nav-content a {
   color: #ffffff;
 }
 /* line 42, ../scss/05-components/_navbar.scss */
-.ekbNavbar-navbar__nav a:hover {
+.ekbNavbar-navbar__nav-content a:hover {
   color: #ffffff;
   text-decoration: none;
   padding-bottom: 5px;
   border-bottom: 2px solid #ffffff;
 }
 /* line 49, ../scss/05-components/_navbar.scss */
-.ekbNavbar-navbar__nav a:visited {
+.ekbNavbar-navbar__nav-content a:visited {
   color: #ffffff;
   text-decoration: none;
 }
-/* line 54, ../scss/05-components/_navbar.scss */
-.ekbNavbar-navbar__nav li {
-  display: inline;
+/* line 55, ../scss/05-components/_navbar.scss */
+.ekbNavbar-navbar__nav-content li {
   font-size: 16px;
   letter-spacing: 2px;
+  display: inline;
   margin-left: 30px;
 }
-/* line 61, ../scss/05-components/_navbar.scss */
+@media (max-width: 768px) {
+  /* line 55, ../scss/05-components/_navbar.scss */
+  .ekbNavbar-navbar__nav-content li {
+    display: block;
+    line-height: 2;
+  }
+}
+@media (max-width: 768px) {
+  /* line 35, ../scss/05-components/_navbar.scss */
+  .ekbNavbar-navbar__nav-content {
+    padding-left: 0;
+    padding-top: 10px;
+  }
+}
+/* line 73, ../scss/05-components/_navbar.scss */
 .ekbNavbar-navbar__nav--active {
   padding-bottom: 5px;
   border-bottom: 2px solid #ffffff;
+  width: fit-content;
 }
 @media (max-width: 768px) {
-  /* line 72, ../scss/05-components/_navbar.scss */
-  .ekbNavbar-container .navbar-toggle.collapsed {
-    display: block;
+  /* line 79, ../scss/05-components/_navbar.scss */
+  .ekbNavbar-navbar__nav-menu {
+    position: fixed;
+    background: #3C9;
+    height: 100%;
+    right: 10%;
+    min-width: 320px;
   }
+}
+@media (max-width: 768px) and (max-width: 500px) {
+  /* line 79, ../scss/05-components/_navbar.scss */
+  .ekbNavbar-navbar__nav-menu {
+    min-width: 240px;
+  }
+}
+
+/* line 94, ../scss/05-components/_navbar.scss */
+.ekbNavbar-navbar__logo {
+  display: block;
+}
+@media (max-width: 768px) {
+  /* line 94, ../scss/05-components/_navbar.scss */
+  .ekbNavbar-navbar__logo {
+    display: none;
+  }
+}
+/* line 106, ../scss/05-components/_navbar.scss */
+.ekbNavbar-container .navbar-toggle {
+  z-index: 999999;
+  margin-right: 10%;
+  padding: 0;
+}
+/* line 111, ../scss/05-components/_navbar.scss */
+.ekbNavbar-container .navbar-toggle span {
+  background: #FFFFFF;
 }
 
 /*!

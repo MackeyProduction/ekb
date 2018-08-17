@@ -27,6 +27,10 @@ html, body {
 
     &-container {
         @extend .container;
+
+        @media (max-width: 768px) {
+            padding: 0 !important;
+        }
     }
 
     &-inner {
@@ -43,9 +47,12 @@ html, body {
         @extend .col-md-6;
 
         &-headline > h1 {
-            font-size: $wrapperHeadline;
             margin-right: 10px;
             margin-bottom: 20px;
+
+            @media (min-width: 560px) {
+                font-size: $wrapperHeadline;
+            }
         }
 
         &-text > p {
@@ -64,6 +71,13 @@ html, body {
 
         &-content {
             font-size: 16px;
+
+            &--submit-span {
+                text-align: center;
+                display: block;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
         }
 
         &-footer {

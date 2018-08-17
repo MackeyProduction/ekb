@@ -3,7 +3,7 @@
     position: absolute;
     width: 100%;
     padding-top: 60px;
-    line-height: 5;
+    line-height: 6;
 
     &-navbar {
         z-index: 9999;
@@ -32,35 +32,70 @@
         }
 
         &__nav {
-            list-style: none;
-            text-transform: lowercase;
+            &-content {
+                list-style: none;
+                text-transform: lowercase;
 
-            a {
-                color: #ffffff;
-            }
+                a {
+                    color: #ffffff;
 
-            a:hover {
-                color: #ffffff;
-                text-decoration: none;
-                padding-bottom: 5px;
-                border-bottom: 2px solid #ffffff;
-            }
+                    &:hover {
+                        color: #ffffff;
+                        text-decoration: none;
+                        padding-bottom: 5px;
+                        border-bottom: 2px solid #ffffff;
+                    }
 
-            a:visited {
-                color: #ffffff;
-                text-decoration: none;
-            }
+                    &:visited {
+                        color: #ffffff;
+                        text-decoration: none;
+                    }
+                }
 
-            li {
-                display: inline;
-                font-size: 16px;
-                letter-spacing: 2px;
-                margin-left: 30px;
+                li {
+                    font-size: 16px;
+                    letter-spacing: 2px;
+                    display: inline;
+                    margin-left: 30px;
+
+                    @media (max-width: 768px) {
+                        display: block;
+                        line-height: 2;
+                    }
+                }
+
+                @media (max-width: 768px) {
+                    padding-left: 0;
+                    padding-top: 10px;
+                }
             }
 
             &--active {
                 padding-bottom: 5px;
                 border-bottom: 2px solid #ffffff;
+                width: fit-content;
+            }
+
+            &-menu {
+                @media (max-width: 768px) {
+                    position: fixed;
+                    background: #3C9;
+                    height: 100%;
+                    right: 10%;
+                    min-width: 320px;
+
+                    @media (max-width: 500px) {
+                        min-width: 240px;
+                    }
+                }
+            }
+        }
+
+        &__logo {
+            display: block;
+
+            @media (max-width: 768px) {
+                display: none;
             }
         }
     }
@@ -69,10 +104,12 @@
         @extend .container-fluid;
 
         .navbar-toggle {
-            &.collapsed {
-                @media (max-width: 768px) {
-                    display: block;
-                }
+            z-index: 999999;
+            margin-right: 10%;
+            padding: 0;
+
+            span {
+                background: #FFFFFF;
             }
         }
     }
