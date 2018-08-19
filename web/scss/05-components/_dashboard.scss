@@ -1,0 +1,122 @@
+.fab {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+
+    &__button {
+        background: #FF4081;
+        border: 0;
+        outline: none;
+        height: 56px;
+        width: 56px;
+        margin: 20px;
+        border-radius: 50%;
+
+        &--box-shadow {
+            box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+        }
+
+        &--align-center {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &__inner {
+        font-size: 32px;
+        color: #FFFFFF;
+        display: inherit;
+        align-items: inherit;
+        justify-content: inherit;
+
+        &.add-icon {
+            position: absolute;
+
+            /* cross animation */
+            &.cross-animation-in {
+                -webkit-animation: cross-in 0.5s ease 0s 1 normal forwards;
+                -o-animation: cross-in 0.5s ease 0s 1 normal forwards;
+                animation: cross-in 0.5s ease 0s 1 normal forwards;
+
+                @-moz-keyframes cross-in {
+                    100% {
+                        -webkit-transform: rotate(45deg);
+                        -moz-transform: rotate(45deg);
+                        -ms-transform: rotate(45deg);
+                        -o-transform: rotate(45deg);
+                        transform: rotate(45deg);
+                    }
+                }
+
+                @-webkit-keyframes cross-in {
+                    100% {
+                        -webkit-transform: rotate(45deg);
+                        -moz-transform: rotate(45deg);
+                        -ms-transform: rotate(45deg);
+                        -o-transform: rotate(45deg);
+                        transform: rotate(45deg);
+                    }
+                }
+
+                @keyframes cross-in {
+                    100% {
+                        -webkit-transform: rotate(45deg);
+                        -moz-transform: rotate(45deg);
+                        -ms-transform: rotate(45deg);
+                        -o-transform: rotate(45deg);
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+
+            &.cross-animation-out {
+                -webkit-animation: cross-out 0.5s ease 0s 1 normal forwards;
+                -o-animation: cross-out 0.5s ease 0s 1 normal forwards;
+                animation: cross-out 0.5s ease 0s 1 normal forwards;
+
+                @-moz-keyframes cross-out {
+                    100% {
+                        -webkit-transform: rotate(-45deg);
+                        -moz-transform: rotate(-45deg);
+                        -ms-transform: rotate(-45deg);
+                        -o-transform: rotate(-45deg);
+                        transform: rotate(-45deg);
+                    }
+                }
+
+                @-webkit-keyframes cross-out {
+                    100% {
+                        -webkit-transform: rotate(-45deg);
+                        -moz-transform: rotate(-45deg);
+                        -ms-transform: rotate(-45deg);
+                        -o-transform: rotate(-45deg);
+                        transform: rotate(-45deg);
+                    }
+                }
+
+                @keyframes cross-out {
+                    100% {
+                        -webkit-transform: rotate(-45deg);
+                        -moz-transform: rotate(-45deg);
+                        -ms-transform: rotate(-45deg);
+                        -o-transform: rotate(-45deg);
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+
+            &:active {
+                @extend .cross-animation-in;
+            }
+
+            &:hover {
+                @extend .cross-animation-in;
+            }
+
+            &:not(:hover) {
+                //@extend .cross-animation-out;
+            }
+        }
+    }
+}
