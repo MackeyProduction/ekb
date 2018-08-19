@@ -25,4 +25,13 @@ class IndexController extends Controller
         // replace this example code with whatever you need
         return $this->render('dashboard/index.html.twig');
     }
+
+    /**
+     * @Route("/account", name="account")
+     */
+    public function accountAction(Request $request)
+    {
+        // replace this example code with whatever you need
+        return $this->render('dashboard/account.html.twig');
+    }
 }

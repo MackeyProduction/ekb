@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <section class="infoBox">
+        <div class="infoBox__headline">
+            <h5 class="infoBox__headline--center">Persönliche Informationen</h5>
+        </div>
+        <div class="infoBox__description">
+            <p>
+                <span><strong>Kürzel:</strong> </span>
+                <span><strong>Name:</strong> </span>
+                <span><strong>Klassen:</strong> </span>
+            </p>
+        </div>
+    </section>
+
+    <section class="infoBox">
+        <div class="infoBox__headline">
+            <h5 class="infoBox__headline--center">Benutzerdaten ändern</h5>
+        </div>
+        <div class="infoBox__description">
+            <form method="post">
+                <div class="form-group">
+                    <label for="oldPassword"><strong>Altes Passwort:</strong></label>
+                    <input type="text" class="form-control" id="oldPassword" name="oldPassword">
+                </div>
+                <div class="form-group">
+                    <label for="newPassword"><strong>Neues Passwort:</strong></label>
+                    <input type="text" class="form-control" id="newPassword" name="newPassword">
+                </div>
+                <div class="form-group">
+                    <label for="repeatPassword"><strong>Passwort bestätigen:</strong></label>
+                    <input type="text" class="form-control" id="repeatPassword" name="repeatPassword">
+                </div>
+
+                <input type="submit" value="Passwort ändern" class="btn btn-success" id="submitData" name="submitData">
+            </form>
+        </div>
+    </section>
+{% endblock %}

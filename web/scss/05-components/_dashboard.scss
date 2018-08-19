@@ -1,3 +1,9 @@
+@import "../06-externals/_bootstrap";
+
+body {
+    background: #ededee;
+}
+
 .fab {
     position: fixed;
     bottom: 10px;
@@ -117,6 +123,40 @@
             &:not(:hover) {
                 //@extend .cross-animation-out;
             }
+        }
+    }
+}
+
+.infoBox {
+    @extend .container;
+    vertical-align: baseline;
+    min-height: 100px;
+
+    &__headline {
+        background: #33CC99;
+        color: #FFFFFF;
+        height: 60px;
+        padding: 20px;
+        -webkit-border-radius: 15px 15px 0 0px;
+        -moz-border-radius: 15px 15px 0 0px;
+        border-radius: 15px 15px 0 0px;
+
+        &--center {
+            line-height: 1em;
+            vertical-align: inherit;
+        }
+    }
+
+    &__description {
+        background: #FFFFFF;
+        padding: 20px;
+        -webkit-border-radius: 0 0 15px 15px;
+        -moz-border-radius: 0 0 15px 15px;
+        border-radius: 0 0 15px 15px;
+        min-height: inherit;
+
+        p span {
+            display: block;
         }
     }
 }
