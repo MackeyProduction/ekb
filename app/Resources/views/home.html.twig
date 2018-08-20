@@ -9,11 +9,13 @@
         {% block stylesheets %}
             <link rel="stylesheet" href="{{ asset('bundles/app/bootstrap/css/bootstrap.css') }}">
             <link rel="stylesheet" href="{{ asset('bundles/app/fontawesome/css/all.css') }}">
+            <link rel="stylesheet" href="{{ asset('bundles/app/wow.js/css/libs/animate.css') }}">
             <link rel="stylesheet" type="text/css" href="{{ asset('css/main.css') }}" />
         {% endblock %}
 
         <script src="{{ asset('bundles/app/bootstrap/js/jquery-3.2.1.js') }}"></script>
         <script src="{{ asset('bundles/app/bootstrap/js/bootstrap.js') }}"></script>
+        <script src="{{ asset('bundles/app/wow.js/dist/wow.js') }}"></script>
 
         <nav class="ekbNavbar">
             <div class="ekbNavbar-container">
@@ -51,4 +53,8 @@
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
+
+    <script>
+        new WOW().init();
+    </script>
 </html>

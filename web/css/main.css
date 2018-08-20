@@ -790,7 +790,7 @@ pre code {
 }
 
 /* line 6, ../../node_modules/bootstrap/scss/_grid.scss */
-.container, .welcomeTeaser-container, .ekbNavbar-navbar, .infoBox {
+.container, .welcomeTeaser-container, .main-section, .ekbNavbar-navbar, .infoBox {
   margin-right: auto;
   margin-left: auto;
   padding-right: 15px;
@@ -799,31 +799,31 @@ pre code {
 }
 @media (min-width: 576px) {
   /* line 6, ../../node_modules/bootstrap/scss/_grid.scss */
-  .container, .welcomeTeaser-container, .ekbNavbar-navbar, .infoBox {
+  .container, .welcomeTeaser-container, .main-section, .ekbNavbar-navbar, .infoBox {
     max-width: 540px;
   }
 }
 @media (min-width: 768px) {
   /* line 6, ../../node_modules/bootstrap/scss/_grid.scss */
-  .container, .welcomeTeaser-container, .ekbNavbar-navbar, .infoBox {
+  .container, .welcomeTeaser-container, .main-section, .ekbNavbar-navbar, .infoBox {
     max-width: 720px;
   }
 }
 @media (min-width: 992px) {
   /* line 6, ../../node_modules/bootstrap/scss/_grid.scss */
-  .container, .welcomeTeaser-container, .ekbNavbar-navbar, .infoBox {
+  .container, .welcomeTeaser-container, .main-section, .ekbNavbar-navbar, .infoBox {
     max-width: 960px;
   }
 }
 @media (min-width: 1200px) {
   /* line 6, ../../node_modules/bootstrap/scss/_grid.scss */
-  .container, .welcomeTeaser-container, .ekbNavbar-navbar, .infoBox {
+  .container, .welcomeTeaser-container, .main-section, .ekbNavbar-navbar, .infoBox {
     max-width: 1140px;
   }
 }
 
 /* line 18, ../../node_modules/bootstrap/scss/_grid.scss */
-.container-fluid, .ekbNavbar-container {
+.container-fluid, .main-section-fluid, .ekbNavbar-container {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
@@ -3616,8 +3616,9 @@ tbody.collapse.show {
   padding: 0.5rem 1rem;
 }
 /* line 28, ../../node_modules/bootstrap/scss/_navbar.scss */
-.navbar > .container, .navbar > .welcomeTeaser-container, .navbar > .ekbNavbar-navbar, .navbar > .infoBox,
+.navbar > .container, .navbar > .welcomeTeaser-container, .navbar > .main-section, .navbar > .ekbNavbar-navbar, .navbar > .infoBox,
 .navbar > .container-fluid,
+.navbar > .main-section-fluid,
 .navbar > .ekbNavbar-container {
   display: flex;
   flex-wrap: wrap;
@@ -3699,8 +3700,9 @@ tbody.collapse.show {
 
 @media (max-width: 575px) {
   /* line 141, ../../node_modules/bootstrap/scss/_navbar.scss */
-  .navbar-expand-sm > .container, .navbar-expand-sm > .welcomeTeaser-container, .navbar-expand-sm > .ekbNavbar-navbar, .navbar-expand-sm > .infoBox,
+  .navbar-expand-sm > .container, .navbar-expand-sm > .welcomeTeaser-container, .navbar-expand-sm > .main-section, .navbar-expand-sm > .ekbNavbar-navbar, .navbar-expand-sm > .infoBox,
   .navbar-expand-sm > .container-fluid,
+  .navbar-expand-sm > .main-section-fluid,
   .navbar-expand-sm > .ekbNavbar-container {
     padding-right: 0;
     padding-left: 0;
@@ -3732,8 +3734,9 @@ tbody.collapse.show {
     padding-left: .5rem;
   }
   /* line 172, ../../node_modules/bootstrap/scss/_navbar.scss */
-  .navbar-expand-sm > .container, .navbar-expand-sm > .welcomeTeaser-container, .navbar-expand-sm > .ekbNavbar-navbar, .navbar-expand-sm > .infoBox,
+  .navbar-expand-sm > .container, .navbar-expand-sm > .welcomeTeaser-container, .navbar-expand-sm > .main-section, .navbar-expand-sm > .ekbNavbar-navbar, .navbar-expand-sm > .infoBox,
   .navbar-expand-sm > .container-fluid,
+  .navbar-expand-sm > .main-section-fluid,
   .navbar-expand-sm > .ekbNavbar-container {
     flex-wrap: nowrap;
   }
@@ -3748,8 +3751,9 @@ tbody.collapse.show {
 }
 @media (max-width: 767px) {
   /* line 141, ../../node_modules/bootstrap/scss/_navbar.scss */
-  .navbar-expand-md > .container, .navbar-expand-md > .welcomeTeaser-container, .navbar-expand-md > .ekbNavbar-navbar, .navbar-expand-md > .infoBox,
+  .navbar-expand-md > .container, .navbar-expand-md > .welcomeTeaser-container, .navbar-expand-md > .main-section, .navbar-expand-md > .ekbNavbar-navbar, .navbar-expand-md > .infoBox,
   .navbar-expand-md > .container-fluid,
+  .navbar-expand-md > .main-section-fluid,
   .navbar-expand-md > .ekbNavbar-container {
     padding-right: 0;
     padding-left: 0;
@@ -3781,8 +3785,9 @@ tbody.collapse.show {
     padding-left: .5rem;
   }
   /* line 172, ../../node_modules/bootstrap/scss/_navbar.scss */
-  .navbar-expand-md > .container, .navbar-expand-md > .welcomeTeaser-container, .navbar-expand-md > .ekbNavbar-navbar, .navbar-expand-md > .infoBox,
+  .navbar-expand-md > .container, .navbar-expand-md > .welcomeTeaser-container, .navbar-expand-md > .main-section, .navbar-expand-md > .ekbNavbar-navbar, .navbar-expand-md > .infoBox,
   .navbar-expand-md > .container-fluid,
+  .navbar-expand-md > .main-section-fluid,
   .navbar-expand-md > .ekbNavbar-container {
     flex-wrap: nowrap;
   }
@@ -3797,8 +3802,9 @@ tbody.collapse.show {
 }
 @media (max-width: 991px) {
   /* line 141, ../../node_modules/bootstrap/scss/_navbar.scss */
-  .navbar-expand-lg > .container, .navbar-expand-lg > .welcomeTeaser-container, .navbar-expand-lg > .ekbNavbar-navbar, .navbar-expand-lg > .infoBox,
+  .navbar-expand-lg > .container, .navbar-expand-lg > .welcomeTeaser-container, .navbar-expand-lg > .main-section, .navbar-expand-lg > .ekbNavbar-navbar, .navbar-expand-lg > .infoBox,
   .navbar-expand-lg > .container-fluid,
+  .navbar-expand-lg > .main-section-fluid,
   .navbar-expand-lg > .ekbNavbar-container {
     padding-right: 0;
     padding-left: 0;
@@ -3830,8 +3836,9 @@ tbody.collapse.show {
     padding-left: .5rem;
   }
   /* line 172, ../../node_modules/bootstrap/scss/_navbar.scss */
-  .navbar-expand-lg > .container, .navbar-expand-lg > .welcomeTeaser-container, .navbar-expand-lg > .ekbNavbar-navbar, .navbar-expand-lg > .infoBox,
+  .navbar-expand-lg > .container, .navbar-expand-lg > .welcomeTeaser-container, .navbar-expand-lg > .main-section, .navbar-expand-lg > .ekbNavbar-navbar, .navbar-expand-lg > .infoBox,
   .navbar-expand-lg > .container-fluid,
+  .navbar-expand-lg > .main-section-fluid,
   .navbar-expand-lg > .ekbNavbar-container {
     flex-wrap: nowrap;
   }
@@ -3846,8 +3853,9 @@ tbody.collapse.show {
 }
 @media (max-width: 1199px) {
   /* line 141, ../../node_modules/bootstrap/scss/_navbar.scss */
-  .navbar-expand-xl > .container, .navbar-expand-xl > .welcomeTeaser-container, .navbar-expand-xl > .ekbNavbar-navbar, .navbar-expand-xl > .infoBox,
+  .navbar-expand-xl > .container, .navbar-expand-xl > .welcomeTeaser-container, .navbar-expand-xl > .main-section, .navbar-expand-xl > .ekbNavbar-navbar, .navbar-expand-xl > .infoBox,
   .navbar-expand-xl > .container-fluid,
+  .navbar-expand-xl > .main-section-fluid,
   .navbar-expand-xl > .ekbNavbar-container {
     padding-right: 0;
     padding-left: 0;
@@ -3879,8 +3887,9 @@ tbody.collapse.show {
     padding-left: .5rem;
   }
   /* line 172, ../../node_modules/bootstrap/scss/_navbar.scss */
-  .navbar-expand-xl > .container, .navbar-expand-xl > .welcomeTeaser-container, .navbar-expand-xl > .ekbNavbar-navbar, .navbar-expand-xl > .infoBox,
+  .navbar-expand-xl > .container, .navbar-expand-xl > .welcomeTeaser-container, .navbar-expand-xl > .main-section, .navbar-expand-xl > .ekbNavbar-navbar, .navbar-expand-xl > .infoBox,
   .navbar-expand-xl > .container-fluid,
+  .navbar-expand-xl > .main-section-fluid,
   .navbar-expand-xl > .ekbNavbar-container {
     flex-wrap: nowrap;
   }
@@ -3900,8 +3909,9 @@ tbody.collapse.show {
   justify-content: flex-start;
 }
 /* line 141, ../../node_modules/bootstrap/scss/_navbar.scss */
-.navbar-expand > .container, .navbar-expand > .welcomeTeaser-container, .navbar-expand > .ekbNavbar-navbar, .navbar-expand > .infoBox,
+.navbar-expand > .container, .navbar-expand > .welcomeTeaser-container, .navbar-expand > .main-section, .navbar-expand > .ekbNavbar-navbar, .navbar-expand > .infoBox,
 .navbar-expand > .container-fluid,
+.navbar-expand > .main-section-fluid,
 .navbar-expand > .ekbNavbar-container {
   padding-right: 0;
   padding-left: 0;
@@ -3925,8 +3935,9 @@ tbody.collapse.show {
   padding-left: .5rem;
 }
 /* line 172, ../../node_modules/bootstrap/scss/_navbar.scss */
-.navbar-expand > .container, .navbar-expand > .welcomeTeaser-container, .navbar-expand > .ekbNavbar-navbar, .navbar-expand > .infoBox,
+.navbar-expand > .container, .navbar-expand > .welcomeTeaser-container, .navbar-expand > .main-section, .navbar-expand > .ekbNavbar-navbar, .navbar-expand > .infoBox,
 .navbar-expand > .container-fluid,
+.navbar-expand > .main-section-fluid,
 .navbar-expand > .ekbNavbar-container {
   flex-wrap: nowrap;
 }
@@ -9385,6 +9396,128 @@ html, body {
   }
 }
 
+/* line 110, ../scss/05-components/_wrapper.scss */
+.main-section {
+  background: transparent;
+  padding: 40px 60px 110px 60px;
+}
+/* line 115, ../scss/05-components/_wrapper.scss */
+.main-section.colored {
+  background: #3C9;
+}
+/* line 119, ../scss/05-components/_wrapper.scss */
+.main-section-fluid {
+  padding: inherit;
+}
+
+/* line 126, ../scss/05-components/_wrapper.scss */
+.team__headline {
+  padding: 40px 60px 40px 60px;
+  text-align: center;
+  line-height: 2em;
+  text-transform: lowercase;
+}
+/* line 132, ../scss/05-components/_wrapper.scss */
+.team__headline--font {
+  font-size: 4em;
+}
+/* line 137, ../scss/05-components/_wrapper.scss */
+.team__profile {
+  margin-bottom: 60px;
+}
+/* line 141, ../scss/05-components/_wrapper.scss */
+.team__profile.right .team__profile__photo {
+  float: right !important;
+}
+/* line 146, ../scss/05-components/_wrapper.scss */
+.team__profile.right .team__profile__description {
+  border-radius: 10px 250px 250px 10px !important;
+}
+/* line 151, ../scss/05-components/_wrapper.scss */
+.team__profile.right .team__profile__description--headline {
+  margin: 0 150px 0 0 !important;
+}
+/* line 156, ../scss/05-components/_wrapper.scss */
+.team__profile.right .team__profile__description--content {
+  margin: 0 250px 0 0 !important;
+}
+/* line 161, ../scss/05-components/_wrapper.scss */
+.team__profile.right .team__profile__description--headline-border {
+  margin: 0 110px 0 0 !important;
+}
+/* line 167, ../scss/05-components/_wrapper.scss */
+.team__profile__photo, .team__profile.right .team__profile__photo {
+  float: left;
+  z-index: 9999;
+  min-height: 250px;
+  min-width: 250px;
+}
+@media (max-width: 991px) {
+  /* line 167, ../scss/05-components/_wrapper.scss */
+  .team__profile__photo, .team__profile.right .team__profile__photo {
+    float: none !important;
+    position: relative !important;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+/* line 180, ../scss/05-components/_wrapper.scss */
+.team__profile__photo img, .team__profile.right .team__profile__photo img {
+  height: 250px;
+  width: 250px;
+}
+/* line 186, ../scss/05-components/_wrapper.scss */
+.team__profile__description, .team__profile.right .team__profile__description {
+  background: #ffffff;
+  border: 1px solid #3C9;
+  border-radius: 250px 10px 10px 250px;
+  min-height: 250px;
+}
+@media (max-width: 991px) {
+  /* line 186, ../scss/05-components/_wrapper.scss */
+  .team__profile__description, .team__profile.right .team__profile__description {
+    border-radius: 10px !important;
+  }
+}
+/* line 196, ../scss/05-components/_wrapper.scss */
+.team__profile__description--headline-border, .team__profile.right .team__profile__description--headline-border {
+  background: #3C9;
+  color: #ffffff;
+  margin: 0 0 0 110px;
+}
+@media (max-width: 991px) {
+  /* line 196, ../scss/05-components/_wrapper.scss */
+  .team__profile__description--headline-border, .team__profile.right .team__profile__description--headline-border {
+    margin: 0 !important;
+    border-radius: 10px 10px 0 0 !important;
+  }
+}
+/* line 207, ../scss/05-components/_wrapper.scss */
+.team__profile__description--headline, .team__profile.right .team__profile__description--headline {
+  margin: 0 0 0 150px;
+  font-size: 16px;
+  line-height: 2em;
+  padding: 10px;
+}
+@media (max-width: 991px) {
+  /* line 207, ../scss/05-components/_wrapper.scss */
+  .team__profile__description--headline, .team__profile.right .team__profile__description--headline {
+    margin: 0 !important;
+  }
+}
+/* line 218, ../scss/05-components/_wrapper.scss */
+.team__profile__description--content, .team__profile.right .team__profile__description--content {
+  margin: 0 0 0 250px;
+  display: block;
+  padding: 10px;
+}
+@media (max-width: 991px) {
+  /* line 218, ../scss/05-components/_wrapper.scss */
+  .team__profile__description--content, .team__profile.right .team__profile__description--content {
+    margin: 0 !important;
+  }
+}
+
 /* line 3, ../scss/05-components/_navbar.scss */
 .ekbNavbar {
   top: 0;
@@ -9695,16 +9828,16 @@ body {
 }
 
 /* line 4, ../scss/07-override/_main.scss */
-.container .content, .welcomeTeaser-container .content, .ekbNavbar-navbar .content, .infoBox .content {
+.container .content, .welcomeTeaser-container .content, .main-section .content, .ekbNavbar-navbar .content, .infoBox .content {
   margin-top: 10%;
   margin-bottom: 10%;
 }
 /* line 8, ../scss/07-override/_main.scss */
-.container .content.left, .welcomeTeaser-container .content.left, .ekbNavbar-navbar .content.left, .infoBox .content.left {
+.container .content.left, .welcomeTeaser-container .content.left, .main-section .content.left, .ekbNavbar-navbar .content.left, .infoBox .content.left {
   text-align: left;
 }
 /* line 12, ../scss/07-override/_main.scss */
-.container .content.center, .welcomeTeaser-container .content.center, .ekbNavbar-navbar .content.center, .infoBox .content.center {
+.container .content.center, .welcomeTeaser-container .content.center, .main-section .content.center, .ekbNavbar-navbar .content.center, .infoBox .content.center {
   text-align: center;
 }
 

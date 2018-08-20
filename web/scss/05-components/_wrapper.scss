@@ -106,3 +106,124 @@ html, body {
         }
     }
 }
+
+.main-section {
+    @extend .container;
+    background: transparent;
+    padding: 40px 60px 110px 60px;
+
+    &.colored {
+        background: #3C9;
+    }
+
+    &-fluid {
+        padding: inherit;
+        @extend .container-fluid;
+    }
+}
+
+.team {
+    &__headline {
+        padding: 40px 60px 40px 60px;
+        text-align: center;
+        line-height: 2em;
+        text-transform: lowercase;
+
+        &--font {
+            font-size: 4em;
+        }
+    }
+
+    &__profile {
+        margin-bottom: 60px;
+
+        &.right {
+            .team__profile__photo {
+                @extend .team__profile__photo;
+                float: right !important;
+            }
+
+            .team__profile__description {
+                @extend .team__profile__description;
+                border-radius: 10px 250px 250px 10px !important;
+            }
+
+            .team__profile__description--headline {
+                @extend .team__profile__description--headline;
+                margin: 0 150px 0 0 !important;
+            }
+
+            .team__profile__description--content {
+                @extend .team__profile__description--content;
+                margin: 0 250px 0 0 !important;
+            }
+
+            .team__profile__description--headline-border {
+                @extend .team__profile__description--headline-border;
+                margin: 0 110px 0 0 !important;
+            }
+        }
+
+        &__photo {
+            float: $profileFloat;
+            z-index: 9999;
+            min-height: 250px;
+            min-width: 250px;
+
+            @include media-breakpoint-down(md) {
+                float: none !important;
+                position: relative !important;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            img {
+                height: 250px;
+                width: 250px;
+            }
+        }
+
+        &__description {
+            background: #ffffff;
+            border: 1px solid #3C9;
+            border-radius: $borderRadiusDescription;
+            min-height: 250px;
+
+            @include media-breakpoint-down(md) {
+                border-radius: 10px !important;
+            }
+
+            &--headline-border {
+                background: #3C9;
+                color: #ffffff;
+                margin: $profileDescriptionHeadlineBorderMargin;
+
+                @include media-breakpoint-down(md) {
+                    margin: 0 !important;
+                    border-radius: 10px 10px 0 0 !important;
+                }
+            }
+
+            &--headline {
+                margin: $profileDescriptionHeadlineMargin;
+                font-size: 16px;
+                line-height: 2em;
+                padding: 10px;
+
+                @include media-breakpoint-down(md) {
+                    margin: 0 !important;
+                }
+            }
+
+            &--content {
+                margin: $profileDescriptionContentMargin;
+                display: block;
+                padding: 10px;
+
+                @include media-breakpoint-down(md) {
+                    margin: 0 !important;
+                }
+            }
+        }
+    }
+}

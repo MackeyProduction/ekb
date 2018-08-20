@@ -1,32 +1,32 @@
 @import "../01-variables/_base";
 
 .text {
-  &-left {
-    float: left;
-  }
-
-  &-center {
-    text-align: center;
-  }
-
-  &-right {
-    float: right;
-
-    @media (max-width: 768px) {
-      display: none;
+    &-left {
+        float: left;
     }
-  }
+
+    &-center {
+        text-align: center;
+    }
+
+    &-right {
+        float: right;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
 }
 
 .navbar {
-  margin: 0;
+    margin: 0;
 
-  a {
-    color: $white;
-    font-weight: bold;
-  }
+    a {
+        color: $white;
+        font-weight: bold;
+    }
 }
 
 .main-section {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
 }
