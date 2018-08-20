@@ -16,5 +16,5 @@
 /vendor/
 /web/bundles/
 /node_modules/
-/.idea/
+.idea
 /web/scss/.sass-cache/
