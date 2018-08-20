@@ -1,0 +1,88 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <button type="button" class="fab fab__button fab__button--box-shadow fab__button--align-center" tabindex="0"
+            aria-label="add">
+        <span class="fab__inner add-icon">
+            <i class="fa fa-plus"></i>
+        </span>
+    </button>
+
+    <section class="infoBox">
+        <div class="infoBox__headline">
+            <h5 class="infoBox__headline--center">Persönliche Informationen</h5>
+        </div>
+        <div class="infoBox__description">
+            <p>
+                <span><strong>Kürzel:</strong> </span>
+                <span><strong>Name:</strong> </span>
+                <span><strong>Klassen:</strong> </span>
+            </p>
+        </div>
+    </section>
+
+    <section class="infoBox">
+        <div class="infoBox__headline">
+            <h5 class="infoBox__headline--center">Stundenplan <span class="text-right">KW 10</span></h5>
+        </div>
+        <div class="infoBox__description">
+            <p>
+
+            </p>
+        </div>
+    </section>
+
+    <section class="infoBox">
+        <div class="infoBox__headline">
+            <h5 class="infoBox__headline--center">Fehlstunden</h5>
+        </div>
+        <div class="infoBox__description">
+            <div class="form-group">
+                <label for="classes"><strong>Klasse</strong></label>
+                <select id="classes" class="form-control">
+                    <option selected>-- Bitte auswählen --</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="students"><strong>Schüler</strong></label>
+                <select id="students" class="form-control">
+                    <option selected>-- Bitte auswählen --</option>
+                    <option>Alle</option>
+                    <option>Max Mustermann</option>
+                    <option>Frank Peters</option>
+                    <option>Markus Steffen</option>
+                </select>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Klasse</th>
+                        <th>Gefehlt am</th>
+                        <th>Fehlstunden</th>
+                        <th>Entschuldigt</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Max Mustermann</td>
+                        <td>FIA6A</td>
+                        <td>25.03.2018</td>
+                        <td>2</td>
+                        <td>Nein</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p>
+                <span><strong>Fehlstunden insgesamt: </strong> 11, davon <strong>unentschuldigt:</strong> 2</span>
+            </p>
+        </div>
+    </section>
+{% endblock %}

@@ -16,5 +16,9 @@
 /vendor/
 /web/bundles/
 /node_modules/
+<<<<<<< HEAD
 .idea
+=======
+/.idea
+>>>>>>> remotes/origin/local
 /web/scss/.sass-cache/
