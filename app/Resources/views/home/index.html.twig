@@ -1,7 +1,7 @@
 {% extends 'home.html.twig' %}
 
 {% block body %}
-    <section class="welcomeTeaser">
+    <div class="welcomeTeaser">
         <div class="welcomeTeaser after"></div>
 
         <div class="welcomeTeaser-container">
@@ -35,18 +35,21 @@
                                     <input type="password" class="form-control" id="passwort" name="passwort"
                                            placeholder="Dein Passwort">
                                 </div>
+
+                                <input type="submit" class="btn btn-lg btn-primary btn-block" value="Einloggen"
+                                name="login" id="login">
+                                <span class="welcomeTeaser__form-content--submit-span">oder</span>
                                 <input type="submit" class="btn btn-lg btn-success btn-block" value="Registrieren"
                                        name="registrieren" id="registrieren">
                             </form>
                         </div>
                         <div class="welcomeTeaser__form-footer">
-                            Durch das Klicken von <q>Registrieren</q>, bestätigst Du unsere <a href="#">Allgemeinen
-                                Geschäftsbedingungen</a>, sowie unsere <a
+                            Durch das Klicken von <q>Registrieren</q>, bestätigst Du unsere  <a
                                     href="#">Datenschutzbestimmungen</a>.
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 {% endblock %}

@@ -1,4 +1,5 @@
 @import "../01-variables/_base";
+@import "../06-externals/_bootstrap";
 
 html, body {
     height: $height;
@@ -27,6 +28,10 @@ html, body {
 
     &-container {
         @extend .container;
+
+        @include media-breakpoint-down(md) {
+            padding: 0 !important;
+        }
     }
 
     &-inner {
@@ -34,18 +39,25 @@ html, body {
         padding-right: 60px;
         padding-left: 60px;
         padding-top: 120px;
-        @extend .row;
+        @include make-row();
     }
 
     &__description {
         color: $white;
         text-shadow: 0 1px 3px $textShadow;
-        @extend .col-md-6;
+        z-index: 1;
+
+        @include media-breakpoint-up(lg) {
+            @include make-col(6);
+        }
 
         &-headline > h1 {
-            font-size: $wrapperHeadline;
             margin-right: 10px;
             margin-bottom: 20px;
+
+            @media (min-width: 560px) {
+                font-size: $wrapperHeadline;
+            }
         }
 
         &-text > p {
@@ -55,15 +67,33 @@ html, body {
 
     &__form {
         font-size: $formContent;
-        @extend .col-md-6;
+        z-index: 1;
+        @include media-breakpoint-up(lg) {
+            @include make-col(6);
+        }
+
+        @include media-breakpoint-down(md) {
+            @include make-col(12);
+        }
 
         &-jumbotron {
             margin-left: 60px;
             @extend .jumbotron;
+
+            @include media-breakpoint-down(lg) {
+                margin: 0;
+            }
         }
 
         &-content {
             font-size: 16px;
+
+            &--submit-span {
+                text-align: center;
+                display: block;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
         }
 
         &-footer {
@@ -71,7 +101,7 @@ html, body {
             color: $grey;
         }
 
-        @media (max-width: 768px) {
+        @include media-breakpoint-down(sm) {
             display: none;
         }
     }

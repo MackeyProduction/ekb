@@ -3,10 +3,12 @@
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}Elektronisches Klassenbuch{% endblock %}</title>
+
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
 
         {% block stylesheets %}
             <link rel="stylesheet" href="{{ asset('bundles/app/bootstrap/css/bootstrap.css') }}">
+            <link rel="stylesheet" href="{{ asset('bundles/app/fontawesome/css/all.css') }}">
             <link rel="stylesheet" type="text/css" href="{{ asset('css/main.css') }}" />
         {% endblock %}
 
@@ -15,27 +17,35 @@
 
         <nav class="ekbNavbar">
             <div class="ekbNavbar-container">
-                <button type="button" class="btn-default navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+                    <span class="burger">
+                        <span class="bun bun-top"></span>
+                        <span class="bun bun-mid"></span>
+                        <span class="bun bun-bottom"></span>
+                    </span>
                 </button>
             </div>
 
             <div class="ekbNavbar-navbar collapse" id="navbar-collapse">
                 <div class="ekbNavbar-navbar-right">
-                    <ul class="ekbNavbar-navbar__nav">
-                        <li class="ekbNavbar-navbar__nav--active"><a href="#">Home</a></li>
-                        <li><a href="#team">Team</a></li>
-                        <li><a href="#funktionen">Funktionen</a></li>
-                        <li><a href="#design">Design</a></li>
-                    </ul>
+                    <div class="ekbNavbar-navbar__nav-menu">
+                        <ul class="ekbNavbar-navbar__nav-content">
+                            <li class="ekbNavbar-navbar__nav--active"><a href="#">Home</a></li>
+                            <li><a href="#team">Team</a></li>
+                            <li><a href="#funktionen">Funktionen</a></li>
+                            <li><a href="#design">Design</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="ekbNavbar-navbar-left">
-                    <img src="{{ asset('img/GSO-logo_cropped_transparent.png') }}" alt="GSO Logo" width="180px" height="80px">
+                    <div class="ekbNavbar-navbar__logo">
+                        <img src="{{ asset('img/GSO-logo_cropped_transparent.png') }}" alt="GSO Logo" width="180px" height="80px">
+                    </div>
                 </div>
             </div>
         </nav>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
         {% block body %}{% endblock %}

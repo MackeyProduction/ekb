@@ -7,11 +7,30 @@
 
         {% block stylesheets %}
             <link rel="stylesheet" href="{{ asset('bundles/app/bootstrap/css/bootstrap.css') }}">
+            <link rel="stylesheet" href="{{ asset('bundles/app/fontawesome/css/all.css') }}">
             <link rel="stylesheet" type="text/css" href="{{ asset('css/main.css') }}" />
         {% endblock %}
 
         <script src="{{ asset('bundles/app/bootstrap/js/jquery-3.2.1.js') }}"></script>
         <script src="{{ asset('bundles/app/bootstrap/js/bootstrap.js') }}"></script>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <nav class="navbar navbar-dark bg-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="text-right">
+                <button class="btn btn-dark">Logout</button>
+            </div>
+        </nav>
+
+        <div class="collapse" id="navbarToggleExternalContent">
+            <div class="bg-dark p-4">
+                <h5 class="text-white h4">Collapsed content</h5>
+                <span class="text-muted">Toggleable via the navbar brand.</span>
+            </div>
+        </div>
     </head>
     <body>
         {% block body %}{% endblock %}
