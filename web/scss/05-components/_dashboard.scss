@@ -130,6 +130,7 @@ body {
 .infoBox {
     @extend .container;
     vertical-align: baseline;
+    margin-top: 30px;
     min-height: 100px;
 
     &__headline {

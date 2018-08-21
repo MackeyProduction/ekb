@@ -1,0 +1,10 @@
+@import "../06-externals/_bootstrap";
+
+@mixin generateCols($lg, $md) {
+    @include media-breakpoint-up(lg) {
+        @include make-col($lg);
+    }
+    @include media-breakpoint-down(lg) {
+        @include make-col($md);
+    }
+}

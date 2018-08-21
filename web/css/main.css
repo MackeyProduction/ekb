@@ -27,11 +27,6 @@
   font-weight: bold;
 }
 
-/* line 30, ../scss/05-components/_main.scss */
-.main-section {
-  margin-bottom: 60px;
-}
-
 /* line 3, ../scss/05-components/_footer.scss */
 .footer {
   width: 100%;
@@ -790,7 +785,7 @@ pre code {
 }
 
 /* line 6, ../../node_modules/bootstrap/scss/_grid.scss */
-.container, .welcomeTeaser-container, .main-section, .ekbNavbar-navbar, .infoBox {
+.container, .welcomeTeaser-container, .main-section, .functions, .design, .ekbNavbar-navbar, .infoBox {
   margin-right: auto;
   margin-left: auto;
   padding-right: 15px;
@@ -799,31 +794,31 @@ pre code {
 }
 @media (min-width: 576px) {
   /* line 6, ../../node_modules/bootstrap/scss/_grid.scss */
-  .container, .welcomeTeaser-container, .main-section, .ekbNavbar-navbar, .infoBox {
+  .container, .welcomeTeaser-container, .main-section, .functions, .design, .ekbNavbar-navbar, .infoBox {
     max-width: 540px;
   }
 }
 @media (min-width: 768px) {
   /* line 6, ../../node_modules/bootstrap/scss/_grid.scss */
-  .container, .welcomeTeaser-container, .main-section, .ekbNavbar-navbar, .infoBox {
+  .container, .welcomeTeaser-container, .main-section, .functions, .design, .ekbNavbar-navbar, .infoBox {
     max-width: 720px;
   }
 }
 @media (min-width: 992px) {
   /* line 6, ../../node_modules/bootstrap/scss/_grid.scss */
-  .container, .welcomeTeaser-container, .main-section, .ekbNavbar-navbar, .infoBox {
+  .container, .welcomeTeaser-container, .main-section, .functions, .design, .ekbNavbar-navbar, .infoBox {
     max-width: 960px;
   }
 }
 @media (min-width: 1200px) {
   /* line 6, ../../node_modules/bootstrap/scss/_grid.scss */
-  .container, .welcomeTeaser-container, .main-section, .ekbNavbar-navbar, .infoBox {
+  .container, .welcomeTeaser-container, .main-section, .functions, .design, .ekbNavbar-navbar, .infoBox {
     max-width: 1140px;
   }
 }
 
 /* line 18, ../../node_modules/bootstrap/scss/_grid.scss */
-.container-fluid, .main-section-fluid, .ekbNavbar-container {
+.container-fluid, .ekbNavbar-container {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
@@ -3616,9 +3611,8 @@ tbody.collapse.show {
   padding: 0.5rem 1rem;
 }
 /* line 28, ../../node_modules/bootstrap/scss/_navbar.scss */
-.navbar > .container, .navbar > .welcomeTeaser-container, .navbar > .main-section, .navbar > .ekbNavbar-navbar, .navbar > .infoBox,
+.navbar > .container, .navbar > .welcomeTeaser-container, .navbar > .main-section, .navbar > .functions, .navbar > .design, .navbar > .ekbNavbar-navbar, .navbar > .infoBox,
 .navbar > .container-fluid,
-.navbar > .main-section-fluid,
 .navbar > .ekbNavbar-container {
   display: flex;
   flex-wrap: wrap;
@@ -3700,9 +3694,8 @@ tbody.collapse.show {
 
 @media (max-width: 575px) {
   /* line 141, ../../node_modules/bootstrap/scss/_navbar.scss */
-  .navbar-expand-sm > .container, .navbar-expand-sm > .welcomeTeaser-container, .navbar-expand-sm > .main-section, .navbar-expand-sm > .ekbNavbar-navbar, .navbar-expand-sm > .infoBox,
+  .navbar-expand-sm > .container, .navbar-expand-sm > .welcomeTeaser-container, .navbar-expand-sm > .main-section, .navbar-expand-sm > .functions, .navbar-expand-sm > .design, .navbar-expand-sm > .ekbNavbar-navbar, .navbar-expand-sm > .infoBox,
   .navbar-expand-sm > .container-fluid,
-  .navbar-expand-sm > .main-section-fluid,
   .navbar-expand-sm > .ekbNavbar-container {
     padding-right: 0;
     padding-left: 0;
@@ -3734,9 +3727,8 @@ tbody.collapse.show {
     padding-left: .5rem;
   }
   /* line 172, ../../node_modules/bootstrap/scss/_navbar.scss */
-  .navbar-expand-sm > .container, .navbar-expand-sm > .welcomeTeaser-container, .navbar-expand-sm > .main-section, .navbar-expand-sm > .ekbNavbar-navbar, .navbar-expand-sm > .infoBox,
+  .navbar-expand-sm > .container, .navbar-expand-sm > .welcomeTeaser-container, .navbar-expand-sm > .main-section, .navbar-expand-sm > .functions, .navbar-expand-sm > .design, .navbar-expand-sm > .ekbNavbar-navbar, .navbar-expand-sm > .infoBox,
   .navbar-expand-sm > .container-fluid,
-  .navbar-expand-sm > .main-section-fluid,
   .navbar-expand-sm > .ekbNavbar-container {
     flex-wrap: nowrap;
   }
@@ -3751,9 +3743,8 @@ tbody.collapse.show {
 }
 @media (max-width: 767px) {
   /* line 141, ../../node_modules/bootstrap/scss/_navbar.scss */
-  .navbar-expand-md > .container, .navbar-expand-md > .welcomeTeaser-container, .navbar-expand-md > .main-section, .navbar-expand-md > .ekbNavbar-navbar, .navbar-expand-md > .infoBox,
+  .navbar-expand-md > .container, .navbar-expand-md > .welcomeTeaser-container, .navbar-expand-md > .main-section, .navbar-expand-md > .functions, .navbar-expand-md > .design, .navbar-expand-md > .ekbNavbar-navbar, .navbar-expand-md > .infoBox,
   .navbar-expand-md > .container-fluid,
-  .navbar-expand-md > .main-section-fluid,
   .navbar-expand-md > .ekbNavbar-container {
     padding-right: 0;
     padding-left: 0;
@@ -3785,9 +3776,8 @@ tbody.collapse.show {
     padding-left: .5rem;
   }
   /* line 172, ../../node_modules/bootstrap/scss/_navbar.scss */
-  .navbar-expand-md > .container, .navbar-expand-md > .welcomeTeaser-container, .navbar-expand-md > .main-section, .navbar-expand-md > .ekbNavbar-navbar, .navbar-expand-md > .infoBox,
+  .navbar-expand-md > .container, .navbar-expand-md > .welcomeTeaser-container, .navbar-expand-md > .main-section, .navbar-expand-md > .functions, .navbar-expand-md > .design, .navbar-expand-md > .ekbNavbar-navbar, .navbar-expand-md > .infoBox,
   .navbar-expand-md > .container-fluid,
-  .navbar-expand-md > .main-section-fluid,
   .navbar-expand-md > .ekbNavbar-container {
     flex-wrap: nowrap;
   }
@@ -3802,9 +3792,8 @@ tbody.collapse.show {
 }
 @media (max-width: 991px) {
   /* line 141, ../../node_modules/bootstrap/scss/_navbar.scss */
-  .navbar-expand-lg > .container, .navbar-expand-lg > .welcomeTeaser-container, .navbar-expand-lg > .main-section, .navbar-expand-lg > .ekbNavbar-navbar, .navbar-expand-lg > .infoBox,
+  .navbar-expand-lg > .container, .navbar-expand-lg > .welcomeTeaser-container, .navbar-expand-lg > .main-section, .navbar-expand-lg > .functions, .navbar-expand-lg > .design, .navbar-expand-lg > .ekbNavbar-navbar, .navbar-expand-lg > .infoBox,
   .navbar-expand-lg > .container-fluid,
-  .navbar-expand-lg > .main-section-fluid,
   .navbar-expand-lg > .ekbNavbar-container {
     padding-right: 0;
     padding-left: 0;
@@ -3836,9 +3825,8 @@ tbody.collapse.show {
     padding-left: .5rem;
   }
   /* line 172, ../../node_modules/bootstrap/scss/_navbar.scss */
-  .navbar-expand-lg > .container, .navbar-expand-lg > .welcomeTeaser-container, .navbar-expand-lg > .main-section, .navbar-expand-lg > .ekbNavbar-navbar, .navbar-expand-lg > .infoBox,
+  .navbar-expand-lg > .container, .navbar-expand-lg > .welcomeTeaser-container, .navbar-expand-lg > .main-section, .navbar-expand-lg > .functions, .navbar-expand-lg > .design, .navbar-expand-lg > .ekbNavbar-navbar, .navbar-expand-lg > .infoBox,
   .navbar-expand-lg > .container-fluid,
-  .navbar-expand-lg > .main-section-fluid,
   .navbar-expand-lg > .ekbNavbar-container {
     flex-wrap: nowrap;
   }
@@ -3853,9 +3841,8 @@ tbody.collapse.show {
 }
 @media (max-width: 1199px) {
   /* line 141, ../../node_modules/bootstrap/scss/_navbar.scss */
-  .navbar-expand-xl > .container, .navbar-expand-xl > .welcomeTeaser-container, .navbar-expand-xl > .main-section, .navbar-expand-xl > .ekbNavbar-navbar, .navbar-expand-xl > .infoBox,
+  .navbar-expand-xl > .container, .navbar-expand-xl > .welcomeTeaser-container, .navbar-expand-xl > .main-section, .navbar-expand-xl > .functions, .navbar-expand-xl > .design, .navbar-expand-xl > .ekbNavbar-navbar, .navbar-expand-xl > .infoBox,
   .navbar-expand-xl > .container-fluid,
-  .navbar-expand-xl > .main-section-fluid,
   .navbar-expand-xl > .ekbNavbar-container {
     padding-right: 0;
     padding-left: 0;
@@ -3887,9 +3874,8 @@ tbody.collapse.show {
     padding-left: .5rem;
   }
   /* line 172, ../../node_modules/bootstrap/scss/_navbar.scss */
-  .navbar-expand-xl > .container, .navbar-expand-xl > .welcomeTeaser-container, .navbar-expand-xl > .main-section, .navbar-expand-xl > .ekbNavbar-navbar, .navbar-expand-xl > .infoBox,
+  .navbar-expand-xl > .container, .navbar-expand-xl > .welcomeTeaser-container, .navbar-expand-xl > .main-section, .navbar-expand-xl > .functions, .navbar-expand-xl > .design, .navbar-expand-xl > .ekbNavbar-navbar, .navbar-expand-xl > .infoBox,
   .navbar-expand-xl > .container-fluid,
-  .navbar-expand-xl > .main-section-fluid,
   .navbar-expand-xl > .ekbNavbar-container {
     flex-wrap: nowrap;
   }
@@ -3909,9 +3895,8 @@ tbody.collapse.show {
   justify-content: flex-start;
 }
 /* line 141, ../../node_modules/bootstrap/scss/_navbar.scss */
-.navbar-expand > .container, .navbar-expand > .welcomeTeaser-container, .navbar-expand > .main-section, .navbar-expand > .ekbNavbar-navbar, .navbar-expand > .infoBox,
+.navbar-expand > .container, .navbar-expand > .welcomeTeaser-container, .navbar-expand > .main-section, .navbar-expand > .functions, .navbar-expand > .design, .navbar-expand > .ekbNavbar-navbar, .navbar-expand > .infoBox,
 .navbar-expand > .container-fluid,
-.navbar-expand > .main-section-fluid,
 .navbar-expand > .ekbNavbar-container {
   padding-right: 0;
   padding-left: 0;
@@ -3935,9 +3920,8 @@ tbody.collapse.show {
   padding-left: .5rem;
 }
 /* line 172, ../../node_modules/bootstrap/scss/_navbar.scss */
-.navbar-expand > .container, .navbar-expand > .welcomeTeaser-container, .navbar-expand > .main-section, .navbar-expand > .ekbNavbar-navbar, .navbar-expand > .infoBox,
+.navbar-expand > .container, .navbar-expand > .welcomeTeaser-container, .navbar-expand > .main-section, .navbar-expand > .functions, .navbar-expand > .design, .navbar-expand > .ekbNavbar-navbar, .navbar-expand > .infoBox,
 .navbar-expand > .container-fluid,
-.navbar-expand > .main-section-fluid,
 .navbar-expand > .ekbNavbar-container {
   flex-wrap: nowrap;
 }
@@ -9270,13 +9254,13 @@ html {
   box-sizing: inherit;
 }
 
-/* line 4, ../scss/05-components/_wrapper.scss */
+/* line 5, ../scss/05-components/_wrapper.scss */
 html, body {
   height: 100%;
   margin: 0;
 }
 
-/* line 9, ../scss/05-components/_wrapper.scss */
+/* line 10, ../scss/05-components/_wrapper.scss */
 .welcomeTeaser {
   overflow: hidden;
   height: 100%;
@@ -9288,24 +9272,24 @@ html, body {
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
 }
 @media (max-width: 768px) {
-  /* line 9, ../scss/05-components/_wrapper.scss */
+  /* line 10, ../scss/05-components/_wrapper.scss */
   .welcomeTeaser {
     height: auto;
   }
 }
-/* line 23, ../scss/05-components/_wrapper.scss */
+/* line 24, ../scss/05-components/_wrapper.scss */
 .welcomeTeaser.after {
   position: absolute;
   opacity: 0.6;
   background: #333;
 }
 @media (max-width: 991px) {
-  /* line 29, ../scss/05-components/_wrapper.scss */
+  /* line 30, ../scss/05-components/_wrapper.scss */
   .welcomeTeaser-container {
     padding: 0 !important;
   }
 }
-/* line 37, ../scss/05-components/_wrapper.scss */
+/* line 38, ../scss/05-components/_wrapper.scss */
 .welcomeTeaser-inner {
   margin-top: 15%;
   padding-right: 60px;
@@ -9316,136 +9300,137 @@ html, body {
   margin-right: -15px;
   margin-left: -15px;
 }
-/* line 45, ../scss/05-components/_wrapper.scss */
+/* line 46, ../scss/05-components/_wrapper.scss */
 .welcomeTeaser__description {
   color: #FFFFFF;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
 @media (min-width: 992px) {
-  /* line 45, ../scss/05-components/_wrapper.scss */
+  /* line 46, ../scss/05-components/_wrapper.scss */
   .welcomeTeaser__description {
     flex: 0 0 50%;
     max-width: 50%;
   }
 }
-/* line 54, ../scss/05-components/_wrapper.scss */
+/* line 55, ../scss/05-components/_wrapper.scss */
 .welcomeTeaser__description-headline > h1 {
   margin-right: 10px;
   margin-bottom: 20px;
 }
 @media (min-width: 560px) {
-  /* line 54, ../scss/05-components/_wrapper.scss */
+  /* line 55, ../scss/05-components/_wrapper.scss */
   .welcomeTeaser__description-headline > h1 {
     font-size: 64px;
   }
 }
-/* line 63, ../scss/05-components/_wrapper.scss */
+/* line 64, ../scss/05-components/_wrapper.scss */
 .welcomeTeaser__description-text > p {
   font-size: 24px;
 }
-/* line 68, ../scss/05-components/_wrapper.scss */
+/* line 69, ../scss/05-components/_wrapper.scss */
 .welcomeTeaser__form {
   font-size: 14px;
   z-index: 1;
 }
 @media (min-width: 992px) {
-  /* line 68, ../scss/05-components/_wrapper.scss */
+  /* line 69, ../scss/05-components/_wrapper.scss */
   .welcomeTeaser__form {
     flex: 0 0 50%;
     max-width: 50%;
   }
 }
 @media (max-width: 991px) {
-  /* line 68, ../scss/05-components/_wrapper.scss */
+  /* line 69, ../scss/05-components/_wrapper.scss */
   .welcomeTeaser__form {
     flex: 0 0 100%;
     max-width: 100%;
   }
 }
-/* line 79, ../scss/05-components/_wrapper.scss */
+/* line 80, ../scss/05-components/_wrapper.scss */
 .welcomeTeaser__form-jumbotron {
   margin-left: 60px;
 }
 @media (max-width: 1199px) {
-  /* line 79, ../scss/05-components/_wrapper.scss */
+  /* line 80, ../scss/05-components/_wrapper.scss */
   .welcomeTeaser__form-jumbotron {
     margin: 0;
   }
 }
-/* line 88, ../scss/05-components/_wrapper.scss */
+/* line 89, ../scss/05-components/_wrapper.scss */
 .welcomeTeaser__form-content {
   font-size: 16px;
 }
-/* line 91, ../scss/05-components/_wrapper.scss */
+/* line 92, ../scss/05-components/_wrapper.scss */
 .welcomeTeaser__form-content--submit-span {
   text-align: center;
   display: block;
   padding-top: 10px;
   padding-bottom: 10px;
 }
-/* line 99, ../scss/05-components/_wrapper.scss */
+/* line 100, ../scss/05-components/_wrapper.scss */
 .welcomeTeaser__form-footer {
   margin-top: 10px;
   color: #777;
 }
 @media (max-width: 767px) {
-  /* line 68, ../scss/05-components/_wrapper.scss */
+  /* line 69, ../scss/05-components/_wrapper.scss */
   .welcomeTeaser__form {
     display: none;
   }
 }
 
-/* line 110, ../scss/05-components/_wrapper.scss */
+/* line 111, ../scss/05-components/_wrapper.scss */
 .main-section {
   background: transparent;
   padding: 40px 60px 110px 60px;
 }
-/* line 115, ../scss/05-components/_wrapper.scss */
+/* line 116, ../scss/05-components/_wrapper.scss */
 .main-section.colored {
-  background: #3C9;
+  background: #3C9 !important;
+  max-width: 100%;
 }
-/* line 119, ../scss/05-components/_wrapper.scss */
-.main-section-fluid {
-  padding: inherit;
+/* line 121, ../scss/05-components/_wrapper.scss */
+.main-section.white {
+  background: #FFFFFF !important;
+  max-width: 100%;
 }
 
-/* line 126, ../scss/05-components/_wrapper.scss */
-.team__headline {
+/* line 128, ../scss/05-components/_wrapper.scss */
+.team__headline, .functions__headline, .design__headline {
   padding: 40px 60px 40px 60px;
   text-align: center;
-  line-height: 2em;
   text-transform: lowercase;
 }
-/* line 132, ../scss/05-components/_wrapper.scss */
+/* line 133, ../scss/05-components/_wrapper.scss */
 .team__headline--font {
-  font-size: 4em;
+  line-height: 2em;
 }
-/* line 137, ../scss/05-components/_wrapper.scss */
+/* line 138, ../scss/05-components/_wrapper.scss */
 .team__profile {
   margin-bottom: 60px;
 }
-/* line 141, ../scss/05-components/_wrapper.scss */
+/* line 142, ../scss/05-components/_wrapper.scss */
 .team__profile.right .team__profile__photo {
   float: right !important;
 }
-/* line 146, ../scss/05-components/_wrapper.scss */
+/* line 147, ../scss/05-components/_wrapper.scss */
 .team__profile.right .team__profile__description {
   border-radius: 10px 250px 250px 10px !important;
 }
-/* line 151, ../scss/05-components/_wrapper.scss */
+/* line 152, ../scss/05-components/_wrapper.scss */
 .team__profile.right .team__profile__description--headline {
   margin: 0 150px 0 0 !important;
 }
-/* line 156, ../scss/05-components/_wrapper.scss */
+/* line 157, ../scss/05-components/_wrapper.scss */
 .team__profile.right .team__profile__description--content {
   margin: 0 250px 0 0 !important;
 }
-/* line 161, ../scss/05-components/_wrapper.scss */
+/* line 162, ../scss/05-components/_wrapper.scss */
 .team__profile.right .team__profile__description--headline-border {
   margin: 0 110px 0 0 !important;
 }
-/* line 167, ../scss/05-components/_wrapper.scss */
+/* line 168, ../scss/05-components/_wrapper.scss */
 .team__profile__photo, .team__profile.right .team__profile__photo {
   float: left;
   z-index: 9999;
@@ -9453,7 +9438,7 @@ html, body {
   min-width: 250px;
 }
 @media (max-width: 991px) {
-  /* line 167, ../scss/05-components/_wrapper.scss */
+  /* line 168, ../scss/05-components/_wrapper.scss */
   .team__profile__photo, .team__profile.right .team__profile__photo {
     float: none !important;
     position: relative !important;
@@ -9461,12 +9446,12 @@ html, body {
     margin-bottom: 20px;
   }
 }
-/* line 180, ../scss/05-components/_wrapper.scss */
+/* line 181, ../scss/05-components/_wrapper.scss */
 .team__profile__photo img, .team__profile.right .team__profile__photo img {
   height: 250px;
   width: 250px;
 }
-/* line 186, ../scss/05-components/_wrapper.scss */
+/* line 187, ../scss/05-components/_wrapper.scss */
 .team__profile__description, .team__profile.right .team__profile__description {
   background: #ffffff;
   border: 1px solid #3C9;
@@ -9474,25 +9459,25 @@ html, body {
   min-height: 250px;
 }
 @media (max-width: 991px) {
-  /* line 186, ../scss/05-components/_wrapper.scss */
+  /* line 187, ../scss/05-components/_wrapper.scss */
   .team__profile__description, .team__profile.right .team__profile__description {
     border-radius: 10px !important;
   }
 }
-/* line 196, ../scss/05-components/_wrapper.scss */
+/* line 197, ../scss/05-components/_wrapper.scss */
 .team__profile__description--headline-border, .team__profile.right .team__profile__description--headline-border {
   background: #3C9;
   color: #ffffff;
   margin: 0 0 0 110px;
 }
 @media (max-width: 991px) {
-  /* line 196, ../scss/05-components/_wrapper.scss */
+  /* line 197, ../scss/05-components/_wrapper.scss */
   .team__profile__description--headline-border, .team__profile.right .team__profile__description--headline-border {
     margin: 0 !important;
     border-radius: 10px 10px 0 0 !important;
   }
 }
-/* line 207, ../scss/05-components/_wrapper.scss */
+/* line 208, ../scss/05-components/_wrapper.scss */
 .team__profile__description--headline, .team__profile.right .team__profile__description--headline {
   margin: 0 0 0 150px;
   font-size: 16px;
@@ -9500,21 +9485,108 @@ html, body {
   padding: 10px;
 }
 @media (max-width: 991px) {
-  /* line 207, ../scss/05-components/_wrapper.scss */
+  /* line 208, ../scss/05-components/_wrapper.scss */
   .team__profile__description--headline, .team__profile.right .team__profile__description--headline {
     margin: 0 !important;
   }
 }
-/* line 218, ../scss/05-components/_wrapper.scss */
+/* line 219, ../scss/05-components/_wrapper.scss */
 .team__profile__description--content, .team__profile.right .team__profile__description--content {
   margin: 0 0 0 250px;
   display: block;
   padding: 10px;
 }
 @media (max-width: 991px) {
-  /* line 218, ../scss/05-components/_wrapper.scss */
+  /* line 219, ../scss/05-components/_wrapper.scss */
   .team__profile__description--content, .team__profile.right .team__profile__description--content {
     margin: 0 !important;
+  }
+}
+
+/* line 232, ../scss/05-components/_wrapper.scss */
+.functions {
+  color: #000;
+}
+/* line 240, ../scss/05-components/_wrapper.scss */
+.functions__description {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+/* line 243, ../scss/05-components/_wrapper.scss */
+.functions__description__col {
+  padding: 20px;
+}
+@media (min-width: 992px) {
+  /* line 243, ../scss/05-components/_wrapper.scss */
+  .functions__description__col {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
+}
+@media (max-width: 1199px) {
+  /* line 243, ../scss/05-components/_wrapper.scss */
+  .functions__description__col {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+/* line 247, ../scss/05-components/_wrapper.scss */
+.functions__description__col-headline {
+  text-align: center;
+  padding: inherit;
+}
+/* line 252, ../scss/05-components/_wrapper.scss */
+.functions__description__col-content {
+  text-align: justify;
+}
+
+/* line 259, ../scss/05-components/_wrapper.scss */
+.design {
+  color: #FFFFFF !important;
+}
+/* line 267, ../scss/05-components/_wrapper.scss */
+.design__description {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+/* line 270, ../scss/05-components/_wrapper.scss */
+.design__description-content {
+  text-align: justify;
+}
+@media (min-width: 992px) {
+  /* line 270, ../scss/05-components/_wrapper.scss */
+  .design__description-content {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+@media (max-width: 1199px) {
+  /* line 270, ../scss/05-components/_wrapper.scss */
+  .design__description-content {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+/* line 275, ../scss/05-components/_wrapper.scss */
+.design__description-images {
+  text-align: center;
+}
+@media (min-width: 992px) {
+  /* line 275, ../scss/05-components/_wrapper.scss */
+  .design__description-images {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+@media (max-width: 1199px) {
+  /* line 275, ../scss/05-components/_wrapper.scss */
+  .design__description-images {
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 }
 
@@ -9796,9 +9868,10 @@ body {
 /* line 130, ../scss/05-components/_dashboard.scss */
 .infoBox {
   vertical-align: baseline;
+  margin-top: 30px;
   min-height: 100px;
 }
-/* line 135, ../scss/05-components/_dashboard.scss */
+/* line 136, ../scss/05-components/_dashboard.scss */
 .infoBox__headline {
   background: #33CC99;
   color: #FFFFFF;
@@ -9808,12 +9881,12 @@ body {
   -moz-border-radius: 15px 15px 0 0px;
   border-radius: 15px 15px 0 0px;
 }
-/* line 144, ../scss/05-components/_dashboard.scss */
+/* line 145, ../scss/05-components/_dashboard.scss */
 .infoBox__headline--center {
   line-height: 1em;
   vertical-align: inherit;
 }
-/* line 150, ../scss/05-components/_dashboard.scss */
+/* line 151, ../scss/05-components/_dashboard.scss */
 .infoBox__description {
   background: #FFFFFF;
   padding: 20px;
@@ -9822,31 +9895,26 @@ body {
   border-radius: 0 0 15px 15px;
   min-height: inherit;
 }
-/* line 158, ../scss/05-components/_dashboard.scss */
+/* line 159, ../scss/05-components/_dashboard.scss */
 .infoBox__description p span {
   display: block;
 }
 
 /* line 4, ../scss/07-override/_main.scss */
-.container .content, .welcomeTeaser-container .content, .main-section .content, .ekbNavbar-navbar .content, .infoBox .content {
+.container .content, .welcomeTeaser-container .content, .main-section .content, .functions .content, .design .content, .ekbNavbar-navbar .content, .infoBox .content {
   margin-top: 10%;
   margin-bottom: 10%;
 }
 /* line 8, ../scss/07-override/_main.scss */
-.container .content.left, .welcomeTeaser-container .content.left, .main-section .content.left, .ekbNavbar-navbar .content.left, .infoBox .content.left {
+.container .content.left, .welcomeTeaser-container .content.left, .main-section .content.left, .functions .content.left, .design .content.left, .ekbNavbar-navbar .content.left, .infoBox .content.left {
   text-align: left;
 }
 /* line 12, ../scss/07-override/_main.scss */
-.container .content.center, .welcomeTeaser-container .content.center, .main-section .content.center, .ekbNavbar-navbar .content.center, .infoBox .content.center {
+.container .content.center, .welcomeTeaser-container .content.center, .main-section .content.center, .functions .content.center, .design .content.center, .ekbNavbar-navbar .content.center, .infoBox .content.center {
   text-align: center;
 }
 
 /* line 18, ../scss/07-override/_main.scss */
 .text-right {
   display: block;
-}
-
-/* line 22, ../scss/07-override/_main.scss */
-section {
-  margin-top: 30px;
 }

@@ -1,4 +1,5 @@
 @import "../01-variables/_base";
+@import "../02-mixins/_mixins";
 @import "../06-externals/_bootstrap";
 
 html, body {
@@ -110,15 +111,16 @@ html, body {
 .main-section {
     @extend .container;
     background: transparent;
-    padding: 40px 60px 110px 60px;
+    padding: $sectionPadding;
 
     &.colored {
-        background: #3C9;
+        background: #3C9 !important;
+        max-width: 100%;
     }
 
-    &-fluid {
-        padding: inherit;
-        @extend .container-fluid;
+    &.white {
+        background: #FFFFFF !important;
+        max-width: 100%;
     }
 }
 
@@ -126,11 +128,10 @@ html, body {
     &__headline {
         padding: 40px 60px 40px 60px;
         text-align: center;
-        line-height: 2em;
         text-transform: lowercase;
 
         &--font {
-            font-size: 4em;
+            line-height: 2em;
         }
     }
 
@@ -224,6 +225,56 @@ html, body {
                     margin: 0 !important;
                 }
             }
+        }
+    }
+}
+
+.functions {
+    @extend .container;
+    color: #000;
+
+    &__headline {
+        @extend .team__headline;
+    }
+
+    &__description {
+        @include make-row();
+
+        &__col {
+            @include generateCols(4, 12);
+            padding: 20px;
+
+            &-headline {
+                text-align: center;
+                padding: inherit;
+            }
+
+            &-content {
+                text-align: justify;
+            }
+        }
+    }
+}
+
+.design {
+    @extend .container;
+    color: #FFFFFF !important;
+
+    &__headline {
+        @extend .team__headline;
+    }
+
+    &__description {
+        @include make-row();
+
+        &-content {
+            text-align: justify;
+            @include generateCols(6, 12);
+        }
+
+        &-images {
+            text-align: center;
+            @include generateCols(6, 12);
         }
     }
 }
