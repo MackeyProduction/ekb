@@ -52,7 +52,7 @@ class User
     /**
      * @var string
      *
-     * @ORM\Column(name="shortcut", type="string", length=2)
+     * @ORM\Column(name="shortcut", type="string", length=20)
      */
     private $shortcut;
 
