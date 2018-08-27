@@ -25,6 +25,8 @@ class UserClass
      * @var int
      *
      * @ORM\Column(name="userId", type="integer")
+     * @ORM\ManyToOne(targetEntity="User")
+     * @ORM\JoinColumn(name="userId", referencedColumnName="id")
      */
     private $userId;
 
@@ -32,6 +34,8 @@ class UserClass
      * @var int
      *
      * @ORM\Column(name="classId", type="integer")
+     * @ORM\ManyToOne(targetEntity="Schoolclass")
+     * @ORM\JoinColumn(name="classId", referencedColumnName="id")
      */
     private $classId;
 

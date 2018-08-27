@@ -25,6 +25,8 @@ class Missing
      * @var int
      *
      * @ORM\Column(name="uId", type="integer")
+     * @ORM\ManyToOne(targetEntity="User")
+     * @ORM\JoinColumn(name="uId", referencedColumnName="id")
      */
     private $uId;
 

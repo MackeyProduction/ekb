@@ -25,6 +25,8 @@ class Timetable
      * @var int
      *
      * @ORM\Column(name="scId", type="integer")
+     * @ORM\ManyToOne(targetEntity="Schoolclass")
+     * @ORM\JoinColumn(name="scId", referencedColumnName="id")
      */
     private $scId;
 
@@ -32,6 +34,8 @@ class Timetable
      * @var int
      *
      * @ORM\Column(name="rId", type="integer")
+     * @ORM\ManyToOne(targetEntity="Room")
+     * @ORM\JoinColumn(name="rId", referencedColumnName="id")
      */
     private $rId;
 
@@ -39,6 +43,8 @@ class Timetable
      * @var int
      *
      * @ORM\Column(name="fId", type="integer")
+     * @ORM\ManyToOne(targetEntity="Subject")
+     * @ORM\JoinColumn(name="fId", referencedColumnName="id")
      */
     private $fId;
 
@@ -46,6 +52,8 @@ class Timetable
      * @var int
      *
      * @ORM\Column(name="tId", type="integer")
+     * @ORM\ManyToOne(targetEntity="User")
+     * @ORM\JoinColumn(name="tId", referencedColumnName="id")
      */
     private $tId;
 

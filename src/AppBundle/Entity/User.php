@@ -39,6 +39,8 @@ class User
      * @var int
      *
      * @ORM\Column(name="pId", type="integer")
+     * @ORM\ManyToOne(targetEntity="Profile")
+     * @ORM\JoinColumn(name="pId", referencedColumnName="id")
      */
     private $pId;
 
@@ -46,6 +48,8 @@ class User
      * @var int
      *
      * @ORM\Column(name="ugId", type="integer")
+     * @ORM\ManyToOne(targetEntity="UserGroup")
+     * @ORM\JoinColumn(name="ugId", referencedColumnName="id")
      */
     private $ugId;
 
