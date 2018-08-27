@@ -3,12 +3,15 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * User
  *
  * @ORM\Table(name="user")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\UserRepository")
+ * @UniqueEntity(fields="username", message="Benutzername wird bereits benutzt.")
  */
 class User
 {
@@ -25,6 +28,9 @@ class User
      * @var string
      *
      * @ORM\Column(name="username", type="string", length=100)
+     *
+     * @Assert\NotBlank(message="Es muss ein Benutzername angegeben werden.")
+     * @Assert\Length(min = 5, minMessage="Der Benutzername muss eine Mindestlänge von 5 Zeichen haben.")
      */
     private $username;
 
@@ -32,8 +38,16 @@ class User
      * @var string
      *
      * @ORM\Column(name="password", type="string", length=100)
+     *
+     * @Assert\NotBlank(message="Das Passwortfeld darf nicht leer sein.")
+     * @Assert\Length(min = 7, max = 4096, minMessage="Das Passwort muss eine Mindestlänge von sieben Zeichen haben.", maxMessage="Das Passwort darf die Maximallänge von 4096 Zeichen nicht überschreiten.")
      */
     private $password;
+
+    /**
+     * @var string
+     */
+    private $passwordRepeat;
 
     /**
      * @var int
@@ -188,6 +202,30 @@ class User
     public function getShortcut()
     {
         return $this->shortcut;
+    }
+
+    /**
+     * Set passwordRepeat
+     *
+     * @param string $passwordRepeat
+     *
+     * @return User
+     */
+    public function setPasswordRepeat($passwordRepeat)
+    {
+        $this->passwordRepeat = $passwordRepeat;
+
+        return $this;
+    }
+
+    /**
+     * Get passwordRepeat
+     *
+     * @return string
+     */
+    public function getPasswordRepeat()
+    {
+        return $this->passwordRepeat;
     }
 }
 
