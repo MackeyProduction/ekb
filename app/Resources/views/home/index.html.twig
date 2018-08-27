@@ -35,9 +35,6 @@
                                        name="login" id="login">
                             </form>
                         </div>
-                        <div class="welcomeTeaser__form-footer">
-                            Du bist neu hier? Dann <a href="#register" data-toggle="modal" data-target="#register">registriere</a> dich noch heute!
-                        </div>
                     </div>
                 </div>
             </div>
@@ -195,35 +192,4 @@
             </div>
         </div>
     </section>
-
-    <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="registerModalLabel">Registrieren</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                {% if form != null %}
-                    {{ form_start(form) }}
-                    <div class="modal-body">
-                        {% for child in form.children|keys %}
-                            <div class="form-group">
-                                {% if 'token' not in form_label(attribute(form.children, child)) %}
-                                    {{ form_label(attribute(form.children, child)) }}
-                                {% endif %}
-                                {{ form_widget(attribute(form.children, child)) }}
-                            </div>
-                        {% endfor %}
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Abbrechen</button>
-                        <input type="submit" class="btn btn-success" value="Registrieren">
-                    </div>
-                    {{ form_end(form) }}
-                {% endif %}
-            </div>
-        </div>
-    </div>
 {% endblock %}

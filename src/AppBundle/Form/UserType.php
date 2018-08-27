@@ -24,18 +24,18 @@ class UserType extends AbstractType
                     'required' => true,
                 ],
             ])
-            ->add('profile', ProfileType::class, [
-                'label' => false,
-            ])
-            ->add('password', PasswordType::class, [
-                'label' => 'Passwort',
+            ->add('shortcut', TextType::class, [
+                'label' => 'Kürzel',
                 'attr' => [
                     'class' => 'form-control',
                     'required' => true,
                 ],
             ])
-            ->add('passwordRepeat', PasswordType::class, [
-                'label' => 'Passwort wiederholen',
+            ->add('profile', ProfileType::class, [
+                'label' => false,
+            ])
+            ->add('plainPassword', PasswordType::class, [
+                'label' => 'Passwort',
                 'attr' => [
                     'class' => 'form-control',
                     'required' => true,

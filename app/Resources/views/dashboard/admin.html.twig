@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <section class="infoBox" id="createUser">
+        <div class="infoBox__headline">
+            <h5 class="infoBox__headline--center">Benutzer erstellen</h5>
+        </div>
+        <div class="infoBox__description">
+            {% if errors > 0 %}
+                <div class="alert alert-danger">
+                    {% for v in violation %}
+                        {{ v|trans }}<br>
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+            {% if form != null %}
+                {{ form_start(form) }}
+                {% for child in form.children|keys %}
+                    <div class="form-group">
+                        {% if 'token' not in form_label(attribute(form.children, child)) %}
+                            {{ form_label(attribute(form.children, child)) }}
+                        {% endif %}
+                        {{ form_widget(attribute(form.children, child)) }}
+                    </div>
+                {% endfor %}
+                <input type="submit" class="btn btn-success" value="Benutzer erstellen">
+                {{ form_end(form) }}
+            {% endif %}
+        </div>
+    </section>
+
+    <section class="infoBox" id="addUserToClass">
+        <div class="infoBox__headline">
+            <h5 class="infoBox__headline--center">Benutzer zur Klasse hinzufügen</h5>
+        </div>
+        <div class="infoBox__description">
+            <p>
+
+            </p>
+        </div>
+    </section>
+
+    <section class="infoBox" id="removeUserFromClass">
+        <div class="infoBox__headline">
+            <h5 class="infoBox__headline--center">Benutzer aus Klasse entfernen</h5>
+        </div>
+        <div class="infoBox__description">
+            <p>
+
+            </p>
+        </div>
+    </section>
+{% endblock %}
