@@ -40,6 +40,9 @@ class UserType extends AbstractType
                     'class' => 'form-control',
                     'required' => true,
                 ],
+            ])
+            ->add('userGroup', UserGroupType::class, [
+                'label' => false,
             ]);
     }
 

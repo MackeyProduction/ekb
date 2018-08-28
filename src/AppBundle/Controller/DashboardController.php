@@ -4,6 +4,7 @@ namespace AppBundle\Controller;
 
 use AppBundle\Entity\Profile;
 use AppBundle\Entity\User;
+use AppBundle\Entity\UserGroup;
 use AppBundle\Form\UserType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -65,7 +66,6 @@ class DashboardController extends Controller
     {
         $v = null;
         $user = new User();
-        $profile = new Profile();
 
         // create form
         $form = $this->createForm(UserType::class, $user);
@@ -74,13 +74,35 @@ class DashboardController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+
+            // get user group
+            $userGroup = $em->getRepository(UserGroup::class)->findOneBy(['name' => $user->getUserGroup()->getName()]);
+
+            if (!$userGroup) {
+                throw $this->createNotFoundException("Keine Benutzergruppe für " . $userGroup->getName() . " gefunden.");
+            }
+
             // encode plain password
             $password = $passwordEncoder->encodePassword($user, $user->getPlainPassword());
             $user->setPassword($password);
+            $user->setUgId($userGroup->getId());
 
             // save in database
-            $em = $this->getDoctrine()->getManager();
-            var_dump($user);
+            $em->persist($user->getProfile());
+            $em->flush();
+
+            // get profile
+            $profile = $em->getRepository(Profile::class)->findOneBy(['email' => $user->getProfile()->getEmail()]);
+
+            if (!$profile) {
+                throw $this->createNotFoundException("Kein Profil mit der Email " . $profile->getEmail() . " gefunden.");
+            }
+
+            // create user
+            $user->setPId($profile->getId());
+            $em->persist($user);
+            $em->flush();
         } else if ($form->isSubmitted() && !$form->isValid()) {
             $v = $this->validation($form->getData());
         }

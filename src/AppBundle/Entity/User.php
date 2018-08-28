@@ -81,6 +81,12 @@ class User implements UserInterface
      */
     protected $profile;
 
+    /**
+     * @Assert\Type(type="AppBundle\Entity\UserGroup")
+     * @Assert\Valid()
+     */
+    protected $userGroup;
+
 
     /**
      * Get id
@@ -292,6 +298,30 @@ class User implements UserInterface
      */
     public function eraseCredentials()
     {
+    }
+
+    /**
+     * Set userGroup
+     *
+     * @param UserGroup $userGroup
+     *
+     * @return $this
+     */
+    public function setUserGroup(UserGroup $userGroup)
+    {
+        $this->userGroup = $userGroup;
+
+        return $this;
+    }
+
+    /**
+     * Get userGroup
+     *
+     * @return UserGroup
+     */
+    public function getUserGroup()
+    {
+        return $this->userGroup;
     }
 }
 
